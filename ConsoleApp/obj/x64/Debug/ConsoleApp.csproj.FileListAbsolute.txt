@@ -1,0 +1,12 @@
+D:\Codes\Islam\ConsoleApp\bin\x64\Debug\ConsoleApp.exe.config
+D:\Codes\Islam\ConsoleApp\bin\x64\Debug\ConsoleApp.exe
+D:\Codes\Islam\ConsoleApp\bin\x64\Debug\ConsoleApp.pdb
+D:\Codes\Islam\ConsoleApp\obj\x64\Debug\ConsoleApp.csproj.AssemblyReference.cache
+D:\Codes\Islam\ConsoleApp\obj\x64\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+D:\Codes\Islam\ConsoleApp\obj\x64\Debug\ConsoleApp.exe
+D:\Codes\Islam\ConsoleApp\obj\x64\Debug\ConsoleApp.pdb
+D:\Codes\Islam\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+D:\Codes\Islam\ConsoleApp\bin\Debug\ConsoleApp.exe
+D:\Codes\Islam\ConsoleApp\bin\Debug\ConsoleApp.pdb
+D:\Codes\Islam\ConsoleApp\bin\Debug\Utils.dll
+D:\Codes\Islam\ConsoleApp\obj\x64\Debug\ConsoleApp.csproj.CopyComplete
