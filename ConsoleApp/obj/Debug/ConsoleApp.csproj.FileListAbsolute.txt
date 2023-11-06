@@ -5,3 +5,12 @@ D:\Codes\Islam\ConsoleApp\obj\Debug\ConsoleApp.csproj.AssemblyReference.cache
 D:\Codes\Islam\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
 D:\Codes\Islam\ConsoleApp\obj\Debug\ConsoleApp.exe
 D:\Codes\Islam\ConsoleApp\obj\Debug\ConsoleApp.pdb
+D:\Codes\NombresDuCoran\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+D:\Codes\NombresDuCoran\ConsoleApp\bin\Debug\ConsoleApp.exe
+D:\Codes\NombresDuCoran\ConsoleApp\bin\Debug\ConsoleApp.pdb
+D:\Codes\NombresDuCoran\ConsoleApp\bin\Debug\Utils.dll
+D:\Codes\NombresDuCoran\ConsoleApp\obj\Debug\ConsoleApp.csproj.AssemblyReference.cache
+D:\Codes\NombresDuCoran\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+D:\Codes\NombresDuCoran\ConsoleApp\obj\Debug\ConsoleApp.csproj.CopyComplete
+D:\Codes\NombresDuCoran\ConsoleApp\obj\Debug\ConsoleApp.exe
+D:\Codes\NombresDuCoran\ConsoleApp\obj\Debug\ConsoleApp.pdb

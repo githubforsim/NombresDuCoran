@@ -11,13 +11,14 @@ namespace ConsoleApp
             //var fzResult = Tools.FindWordInLine("Lion", "FreLion est Lion ou pas un Liond Lion");
             //ConvertOriginalFile();
 
-            var word = "Akhilleus";
             var chants = GetChants();
+
+            var word = "Akhilleus";
             var total = 0;
-            for (int i = 0; i < chants.Count; i++)
+            for (int i = 0; i < chants.Length; i++)
             {
                 var chant = chants[i];
-                var result = Tools.FindLinesOfWord(chant, word);
+                var result = Tools.FindLinesOfWord(chant._lignes, word);
                 total += result.Length;
                 Console.WriteLine("Chant " + (i+1) + " : " + result.Length);
             }
@@ -28,10 +29,10 @@ namespace ConsoleApp
             Console.ReadKey();
         }
 
-        private static List<List<string>> GetChants()
+        private static Chant[] GetChants()
         {
             var lines = File.ReadAllLines("Iliade.txt");
-            var chants = new List<List<string>>();
+            var chantsAsLists = new List<List<string>>();
             {
                 List<string> chant = null;
                 foreach (var line in lines)
@@ -40,7 +41,7 @@ namespace ConsoleApp
                         (line.Length == "Chant X".Length || line.Length == "Chant XX".Length)
                         )
                     {
-                        chants.Add(chant = new List<string>());
+                        chantsAsLists.Add(chant = new List<string>());
                     }
 
                     chant.Add(line);
@@ -53,7 +54,14 @@ namespace ConsoleApp
             //    File.WriteAllLines("Chant_" + (i + 1) + ".txt", chant);
             //}
 
-            return chants;
+            var output = new List<Chant>();
+            for (int i = 0; i < chantsAsLists.Count; i++)
+            {
+                var chant = new Chant(chantsAsLists[i].ToArray());
+                output.Add(chant);
+            }
+
+            return output.ToArray();
         }
 
         private static void ConvertOriginalFile()
