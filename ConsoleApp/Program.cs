@@ -10,8 +10,11 @@ namespace ConsoleApp
         {
             //var fzResult = Tools.FindWordInLine("Lion", "FreLion est Lion ou pas un Liond Lion");
             //ConvertOriginalFile();
+            //return;
 
             var chants = GetChants();
+            CreatePages(chants);
+            return;
 
             var word = "Akhilleus";
             var total = 0;
@@ -62,6 +65,20 @@ namespace ConsoleApp
             }
 
             return output.ToArray();
+        }
+
+        private static void CreatePages(Chant[] chants)
+        {
+            int idPage = 1;
+            for (int idChant = 1; idChant <= chants.Length; idChant++) 
+            {
+                Chant chant = chants[idChant-1];
+                for (int i = 1; i <= chant.NbPages; i++) 
+                {
+                    File.WriteAllLines("Pages/Page_" + idPage + " - Chant " + idChant + ".txt", chant.GetLinesOfPage(i));
+                    idPage++;
+                }
+            }
         }
 
         private static void ConvertOriginalFile()

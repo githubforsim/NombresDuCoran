@@ -16,7 +16,7 @@ namespace ConsoleApp
                     return _lignes.Length / NbLignesParPage;
                 }
 
-                return _lignes.Length / NbLignesParPage + 1; xXXX A poursuivre avec la production des pages pour vérification
+                return _lignes.Length / NbLignesParPage + 1;
             }
         }
 
@@ -44,6 +44,6 @@ namespace ConsoleApp
             _lignes = lignes ?? throw new ArgumentNullException(nameof(lignes));
         }
 
-        public const int NbLignesParPage = 32;
+        public const int NbLignesParPage = 50;
     }
 }
