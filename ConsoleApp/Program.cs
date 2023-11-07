@@ -13,23 +13,56 @@ namespace ConsoleApp
             //return;
 
             var chants = GetChants();
-            CreatePages(chants);
-            return;
+            var nbPages = GetNbPages(chants);
 
-            var word = "Akhilleus";
-            var total = 0;
-            for (int i = 0; i < chants.Length; i++)
+            var words = new string[]
+                {
+                "Akhilleus", "Zeus", "Apollôn",
+                "Odysseus", "Troiens", "Hektôr", "Hélénè"
+                };
+
+            var nbCaracteristiques = new int[]
             {
-                var chant = chants[i];
-                var result = Tools.FindLinesOfWord(chant._lignes, word);
-                total += result.Length;
-                Console.WriteLine("Chant " + (i+1) + " : " + result.Length);
-            }
+                314,
+                nbPages,
+            };
 
-            Console.WriteLine("\nTotal = " + total);
+            foreach(var word in words)
+            {
+                Console.WriteLine("\nTest du mot : " + word);
+                var suite = GetSuiteOfOccurrenceByChant(chants, word);
+                if (TestSuitesEntiers.Test(suite, nbCaracteristiques))
+                {
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    Console.WriteLine("\nMIRACLE §§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+                    break;
+                }
+            }
 
             Console.WriteLine("\n\nPress a key ...");
             Console.ReadKey();
+        }
+
+        private static int[] GetSuiteOfOccurrenceByChant(Chant[] chants, string word)
+        {
+            var output = new int[chants.Length];
+
+            for (int i = 0; i < chants.Length; i++)
+            {
+                var chant = chants[i];
+                var nbOccurrences = Tools.GetNbOccurrenceOfWord(chant._lignes, word);
+                output[i] = nbOccurrences;
+            }
+
+            return output;
         }
 
         private static Chant[] GetChants()
@@ -65,6 +98,16 @@ namespace ConsoleApp
             }
 
             return output.ToArray();
+        }
+
+        private static int GetNbPages(Chant[] chants)
+        {
+            int nbPages = 0;
+            foreach (var chant in chants)
+            {
+                nbPages += chant.NbPages;
+            }
+            return nbPages;
         }
 
         private static void CreatePages(Chant[] chants)

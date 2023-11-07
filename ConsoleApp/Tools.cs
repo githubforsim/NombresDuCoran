@@ -31,6 +31,12 @@ namespace ConsoleApp
             return output.ToArray();
         }
 
+        public static int GetNbOccurrenceOfWord(this IEnumerable<string> self, string word)
+        {
+            var result = FindLinesOfWord(self, word);
+            return result.Length;
+        }
+
         public static int[] FindLinesOfWord(this IEnumerable<string> self, string word) 
         { 
             var output = new List<int>();
